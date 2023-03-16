@@ -1,0 +1,161 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+main:after {
+    content: '';
+    min-height: 100vh;
+    height: max-content;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.13497899159663862) 0%, rgba(0, 0, 0, 0.9360994397759104) 100%);
+    z-index: -1;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.informacoes {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.logo {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.descricao-logo {
+    width: 100%;
+}
+
+.descricao {
+    width: 50%;
+    font-size: 20px;
+    color: #d8d6d6;
+    line-height: 25px;
+    margin-bottom: 40px;
+
+}
+
+.youtube {
+    border: 1px solid #940c0c;
+    color: #c9c7c7;
+    padding: 6px;
+    border-radius: 13px;
+    margin: 3px;
+}
+
+.youtube:hover {
+    color: #c9c7c7;
+    padding: 7px;
+    cursor: progress;
+}
+
+
+.botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botao {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+}
+
+.botao.selecionado {
+    background-color: #940c0c;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icone {
+    width: 30px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.icone:hover {
+    transform: scale(1.2);
+}
+
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.setas {
+    cursor: pointer;
+}
+
+.seta-esquerda {
+    cursor: pointer;
+    height: 100px;
+    filter: invert(1);
+    opacity: 0.2;
+}
+
+.seta-direita {
+    cursor: pointer;
+    height: 100px;
+    filter: invert(1);
+    opacity: 0.2;
+}
+
+.imagem {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: mudarImagem 0.7s;
+}
+
+.imagem.ativa {
+    display: block;
+}
+
+@keyframes mudarImagem {
+    from {
+        opacity: 0.85;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
